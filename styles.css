@@ -755,9 +755,9 @@ cursor: pointer;
     margin-bottom: 0px;
   }
 
-  .displayer0 video {
-    object-fit: contain;
-    object-position: center;
+  .displayer0 {
+    display: none;
+    visibility: hidden;
   }
 
   .displayer1 h1 {
