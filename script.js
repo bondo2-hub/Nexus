@@ -59,4 +59,90 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const boxes = document.querySelectorAll('.box-sheet');
 
+  let debounceTimeout;
+
+  boxes.forEach(box => {
+    const topLeftElement = box.querySelector('.top-left');
+    const centerTextElement = box.querySelector('.center-text');
+    const targetText = box.getAttribute('data-text');
+
+    // Store the original text in a dataset attribute
+    topLeftElement.dataset.originalText = topLeftElement.textContent;
+
+    box.addEventListener('mouseover', () => {
+      clearTimeout(debounceTimeout); // Clear any existing timeout
+      debounceTimeout = setTimeout(() => {
+        centerTextElement.textContent = targetText; // Change center text
+        centerTextElement.style.opacity = 1; // Show center text
+      }, 200); // Debounce delay before running the hover effect
+    });
+
+    box.addEventListener('mouseout', () => {
+      clearTimeout(debounceTimeout); // Clear any existing timeout
+      debounceTimeout = setTimeout(() => {
+        centerTextElement.style.opacity = 0; // Hide center text
+      }, 200); // Debounce delay before running the unhover effect
+    });
+  });
+
+  // Add an event listener to the .boxes container
+  const boxesContainer = document.querySelector('.boxes');
+
+  boxesContainer.addEventListener('mouseleave', () => {
+    boxes.forEach(box => {
+      const centerTextElement = box.querySelector('.center-text');
+      centerTextElement.style.opacity = 0; // Hide center text for all elements
+    });
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const boxes = document.querySelectorAll('.box-sheet');
+
+  let debounceTimeout;
+
+  boxes.forEach(box => {
+      const topLeftElement = box.querySelector('.top-left');
+      const centerTextElement = box.querySelector('.center-text');
+      const targetText = box.getAttribute('data-text');
+
+      topLeftElement.dataset.originalText = topLeftElement.textContent;
+
+      box.addEventListener('mouseover', () => {
+          clearTimeout(debounceTimeout);
+          debounceTimeout = setTimeout(() => {
+              centerTextElement.textContent = targetText;
+              centerTextElement.style.opacity = 1;
+          }, 200);
+      });
+
+      box.addEventListener('mouseout', () => {
+          clearTimeout(debounceTimeout);
+          debounceTimeout = setTimeout(() => {
+              centerTextElement.style.opacity = 0;
+          }, 200);
+      });
+  });
+
+  const swipeLeftButton = document.querySelector('.swipe-left');
+  const swipeRightButton = document.querySelector('.swipe-right');
+  const displayer3 = document.querySelector('.displayer3');
+
+  swipeLeftButton.addEventListener('click', () => {
+      displayer3.scrollBy({
+          left: -350, // Adjust scroll distance as needed
+          behavior: 'smooth'
+      });
+  });
+
+  swipeRightButton.addEventListener('click', () => {
+      displayer3.scrollBy({
+          left: 350, // Adjust scroll distance as needed
+          behavior: 'smooth'
+      });
+  });
+});
