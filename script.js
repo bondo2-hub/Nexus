@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
   boxesContainer.addEventListener('mouseleave', () => {
       boxes.forEach(box => {
           const centerTextElement = box.querySelector('.center-text');
-          centerTextElement.style.opacity = 0; // Hide center text for all elements
+          centerTextElement.style.opacity = 0;
       });
   });
 
@@ -79,18 +79,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const swipeLeftButton = document.querySelector('.swipe-left');
   const swipeRightButton = document.querySelector('.swipe-right');
   const displayer3 = document.querySelector('.displayer3');
-  const boxWidth = document.querySelector('.box-container').offsetWidth; // Get the width of a single box
+  const boxWidth = document.querySelector('.box-container').offsetWidth;
 
   swipeLeftButton.addEventListener('click', () => {
       displayer3.scrollBy({
-          left: -boxWidth, // Scroll by the width of one box
+          left: -boxWidth,
           behavior: 'smooth'
       });
   });
 
   swipeRightButton.addEventListener('click', () => {
       displayer3.scrollBy({
-          left: boxWidth, // Scroll by the width of one box
+          left: boxWidth,
           behavior: 'smooth'
       });
   });
