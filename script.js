@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
           }
       });
   }, {
-      threshold: 0.1 // Adjust threshold here
+      threshold: 0.1
   });
 
   elements.forEach(element => {
@@ -41,7 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   }
 
-  // Box hover text change with debounce
   const boxes = document.querySelectorAll('.box-sheet');
 
   boxes.forEach(box => {
@@ -96,3 +95,16 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   });
 });
+
+
+const black_theme_btn = document.getElementById('black-color-theme');
+const white_theme_btn = document.getElementById('white-color-theme');
+
+black_theme_btn.addEventListener('click', () => {
+    document.body.className = 'dark-theme';
+});
+
+white_theme_btn.addEventListener('click', () => {
+    document.body.className = 'light-theme';
+});
+
