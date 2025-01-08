@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" translate='no'>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -178,7 +178,11 @@
                             <a href="#stellar" class="dropdown-link">Stellar</a> 
                             <a href="#aether" class="dropdown-link">Aether</a> 
                             <a href="#aeropods" class="dropdown-link">AeroPods</a>
-                            <a href="#support" class="dropdown-link">Support</a> 
+                            <a href="#support" class="dropdown-link">Support</a>
+                            <div class='theme-colors'>
+                                <button id='black-color-theme'></button>
+                                <button id='white-color-theme'></button>
+                            </div>
                         </div>
                     </div>
                 </header>
@@ -344,6 +348,10 @@
                 <button class="swipe-right"><i class='bx bx-chevron-right' ></i></button>
             </div>
             
+            <div class="displayer4">
+                <h3>None have suit you?</h3>
+                <button class='BuildBtn'><a href="build.html">Build Your own</a></button>
+            </div>
               
             <section id="footer">
                 <footer class='footer'>
@@ -370,7 +378,7 @@
                         </div>
                 
                         <div class="down-footer">
-                            &copy; 2025 NEXUS | All Rights Reserved
+                            &copy; 2024 NEXUS | All Rights Reserved
                         </div>
                     </div>
                 </footer>                
@@ -380,3 +388,39 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+<style>
+    .displayer4 {
+        background-color: white;
+        padding: 50px;
+        text-align: center;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    .displayer4 h3 {
+        font-size: 30px;
+    }
+
+    .BuildBtn {
+        font-family: 'Montserrat';
+        background-color: transparent;
+        color: black;
+        width: 300px;
+        height: 50px;
+        border: 1px solid black;
+        cursor: pointer;
+        transition: 0.3s ease-out;
+        font-size: 20px;
+    }
+
+    .BuildBtn:hover {
+       transform: scale(1.02);
+    }
+
+    .BuildBtn a {
+        color: black;
+        text-decoration: none;
+    }
+</style>
