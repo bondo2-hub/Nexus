@@ -248,16 +248,17 @@
         </div>
     
         <div class="laptop-specs">
-            <h2>Laptop Specifications</h2>
+            <h1>CUSTOMIZE YOUR LAPTOP</h1>
+            <h2>Chassis color</h2>
             <div class="laptop-colors">
                 <button id='toMid' onclick="colorMid()" class='color1'><span></span></button>
                 <button id='toSil' onclick="colorSil()" class='color2'><span></span></button>
                 <button id='toPink' onclick="colorPink()" class='color3'><span></span></button>
             </div>
         
-            <h2>Backlight</h2>
+            <h2>Keyboard backlight</h2>
             <div class="back-light">
-                <button id='toRGB' onclick="nobacklight()" class='backlight0'><span>X</span></button>
+                <button id='toRGB' onclick="nobacklight()" class='backlight0'><span><i class='bx bx-x'></i></span></button>
                 <button id='toRGB' onclick="backlightRGB()" class='backlight1 rgb'><span></span></button>
                 <button id='toWhite' onclick="backlightWhite()" class='backlight2'><span></span></button>
                 <button id='toBlue' onclick="backlightBlue()" class='backlight3'><span></span></button>
@@ -272,7 +273,6 @@
                 <button class="cpu">Apple M1</button>
                 <button class="cpu">Intel Core i7</button>
                 <button class="cpu">AMD Ryzen 7</button>
-                <button class="cpu">Apple M1 Max</button>
             </div>
             
             <h2>Graphics Card</h2>
@@ -291,14 +291,17 @@
                 <button class="ram-option">16 GB</button>
                 <button class="ram-option">32 GB</button>
                 <button class="ram-option">64 GB</button>
+                <button class="ram-option">128 GB</button>
             </div>
-        
+            
             <h2>Storage</h2>
+            
             <div class="storage">
                 <button class="storage-option">256 GB SSD</button>
                 <button class="storage-option">512 GB SSD</button>
                 <button class="storage-option">1 TB SSD</button>
                 <button class="storage-option">2 TB SSD</button>
+                <button class="storage-option">4 TB SSD</button>
             </div>
         </div>
         
@@ -309,351 +312,451 @@
 
 <style>
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 @keyframes loadIn {
-    0% {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 body {
-    background-color:#f0f0f0;
-    font-family: 'Montserrat';
+  background-color: #f0f0f0;
+  font-family: "Montserrat";
 }
 
 .laptop {
-    position: relative;
-    perspective: 2000px;
-    transform-style: preserve-3d;
-    animation: loadIn 0.64s;
+  position: relative;
+  perspective: 2000px;
+  transform-style: preserve-3d;
+  animation: loadIn 0.64s;
 }
 
 .screen {
-    background: linear-gradient(135deg, #1a1a1a, #28282B);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
-    width: 700px;
-    height: 420px;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    margin-bottom: -26px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    
-    transform: rotateX(-20deg);
-    transition: background 0.5s ease;
+  background: linear-gradient(135deg, #1a1a1a, #28282b);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+  width: 700px;
+  height: 420px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  margin-bottom: -26px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  transform: rotateX(-20deg);
+  transition: background 0.5s ease;
 }
 
 .screen h2 {
-    color: white;
-    margin-top: 5px;
-    font-size: 12px;
-    font-weight: 300;
+  color: white;
+  margin-top: 5px;
+  font-size: 12px;
+  font-weight: 300;
 }
 
 .inner-screen {
-    background-color: white;
-    width: 680px;
-    height: 370px;
-    border-radius: 5px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
-    margin-top: 10px;
+  background-color: white;
+  width: 680px;
+  height: 370px;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin-top: 10px;
 }
 
 .inner-screen img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .base {
-    background: linear-gradient(135deg, #1a1a1a, #28282B);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
-    width: 700px;
-    height: 420px;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    transform: rotateX(20deg);
-    transition: background 0.5s ease; /* Added transition */
+  background: linear-gradient(135deg, #1a1a1a, #28282b);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+  width: 700px;
+  height: 420px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform: rotateX(20deg);
+  transition: background 0.5s ease; /* Added transition */
 }
 
 .keyboard {
-    background: linear-gradient(135deg, #1a1a1a, #28282B);
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
-    width: 90%;
-    position: relative;
-    bottom: 20px; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    animation: loadIn 0.8s;
-    transition: background 0.5s ease; /* Added transition */
+  background: linear-gradient(135deg, #1a1a1a, #28282b);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+  width: 90%;
+  position: relative;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  animation: loadIn 0.8s;
+  transition: background 0.5s ease; /* Added transition */
 }
 
 .trackpad {
-    background: linear-gradient(135deg, #1a1a1a, #28282B);
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
-    width: 40%;
-    height: 100px;
-    background-color: #28282B;
-    border-radius: 5px;
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background 0.5s ease; /* Added transition */
+  background: linear-gradient(135deg, #1a1a1a, #28282b);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+  width: 40%;
+  height: 100px;
+  background-color: #28282b;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.5s ease; /* Added transition */
 }
 
 .row {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .key {
-    font-family: 'Montserrat';
-    background-color: #000000;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2), inset 0 -2px 5px rgba(0, 0, 0, 0.5);
-    color: #cccccc;
-    width: 35px;
-    height: 35px;
-    margin: 3px;
+  font-family: "Montserrat";
+  background-color: #000000;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2), inset 0 -2px 5px rgba(0, 0, 0, 0.5);
+  color: #cccccc;
+  width: 35px;
+  height: 35px;
+  margin: 3px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    font-size: 10px;
-    border: none;
-    cursor: pointer;
-    position: relative;
-    transition: 0.2s ease;
-    animation: loadIn 0.9s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 10px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: 0.2s ease;
+  animation: loadIn 0.9s;
 }
 
 .key:hover {
-    background-color: #1a1a1a;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4), inset 0 -2px 5px rgba(0, 0, 0, 0.7);
-    color: white;
+  background-color: #1a1a1a;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4), inset 0 -2px 5px rgba(0, 0, 0, 0.7);
+  color: white;
 }
 
 .key:active {
-    transform: scale(0.9);
+  transform: scale(0.9);
 }
 
 .backlight-rgb {
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5), 0 0 15px rgba(255, 0, 0, 0.2), 0 0 15px rgba(255, 0, 0, 0.2); /* Red glow */
-    animation: rgbBacklight 3s infinite;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.5), 0 0 15px rgba(255, 0, 0, 0.2),
+    0 0 15px rgba(255, 0, 0, 0.2); /* Red glow */
+  animation: rgbBacklight 3s infinite;
 }
 
 .backlight-white {
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 255, 255, 0.2), 0 0 15px rgba(255, 255, 255, 0.2); /* White glow */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8),
+    0 0 15px rgba(255, 255, 255, 0.2), 0 0 15px rgba(255, 255, 255, 0.2); /* White glow */
 }
 
 .backlight-red {
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.8), 0 0 15px rgba(255, 0, 0, 0.2), 0 0 15px rgba(255, 0, 0, 0.2); /* Red glow */
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.8), 0 0 15px rgba(255, 0, 0, 0.2),
+    0 0 15px rgba(255, 0, 0, 0.2); /* Red glow */
 }
 
 .backlight-green {
-    box-shadow: 0 0 15px rgba(0, 255, 0, 0.8), 0 0 15px rgba(0, 255, 0, 0.2), 0 0 15px rgba(0, 255, 0, 0.2); /* Green glow */
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.8), 0 0 15px rgba(0, 255, 0, 0.2),
+    0 0 15px rgba(0, 255, 0, 0.2); /* Green glow */
 }
 
 .backlight-blue {
-    box-shadow: 0 0 15px rgba(0, 0, 255, 0.8), 0 0 15px rgba(0, 0, 255, 0.2), 0 0 15px rgba(0, 0, 255, 0.2); /* Blue glow */
+  box-shadow: 0 0 15px rgba(0, 0, 255, 0.8), 0 0 15px rgba(0, 0, 255, 0.2),
+    0 0 15px rgba(0, 0, 255, 0.2); /* Blue glow */
 }
 
 .backlight-pink {
-    box-shadow: 0 0 15px #FFD6D1, 0 0 15px rgba(255, 192, 203, 0.2), 0 0 15px rgba(255, 192, 203, 0.2); /* Pink glow */
+  box-shadow: 0 0 15px #ffd6d1, 0 0 15px rgba(255, 192, 203, 0.2),
+    0 0 15px rgba(255, 192, 203, 0.2); /* Pink glow */
 }
 
 .no-backlight {
-    box-shadow: none; /* No glow */
-    animation: none; /* No glow animation */
+  box-shadow: none; /* No glow */
+  animation: none; /* No glow animation */
 }
 
 @keyframes rgbBacklight {
-    0% { box-shadow: 0 0 15px rgba(255, 0, 0, 0.5), 0 0 15px rgba(255, 0, 0, 0.5), 0 0 15px rgba(255, 0, 0, 0.5); } /* Red */
-    33% { box-shadow: 0 0 15px rgba(0, 255, 0, 0.5), 0 0 15px rgba(0, 255, 0, 0.5), 0 0 15px rgba(0, 255, 0, 0.5); } /* Green */
-    66% { box-shadow: 0 0 15px rgba(0, 0, 255, 0.5), 0 0 15px rgba(0, 0, 255, 0.5), 0 0 15px rgba(0, 0, 255, 0.5); } /* Blue */
-    100% { box-shadow: 0 0 15px rgba(255, 0, 0, 0.5), 0 0 15px rgba(255, 0, 0, 0.5), 0 0 15px rgba(255, 0, 0, 0.5); } /* Back to red */
+  0% {
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5), 0 0 15px rgba(255, 0, 0, 0.5),
+      0 0 15px rgba(255, 0, 0, 0.5);
+  } /* Red */
+  33% {
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5), 0 0 15px rgba(0, 255, 0, 0.5),
+      0 0 15px rgba(0, 255, 0, 0.5);
+  } /* Green */
+  66% {
+    box-shadow: 0 0 15px rgba(0, 0, 255, 0.5), 0 0 15px rgba(0, 0, 255, 0.5),
+      0 0 15px rgba(0, 0, 255, 0.5);
+  } /* Blue */
+  100% {
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5), 0 0 15px rgba(255, 0, 0, 0.5),
+      0 0 15px rgba(255, 0, 0, 0.5);
+  } /* Back to red */
 }
 
 .back-space {
-    width: 120px;
+  width: 120px;
 }
 
 .tap {
-    width: 50px;
+  width: 50px;
 }
 
 .front-slash {
-    width: 100px;
+  width: 100px;
 }
 
 .enter {
-    width: 120px;
+  width: 120px;
 }
 
 .capslock {
-    width: 50px;
+  width: 50px;
 }
 
 .left-shift {
-    width: 80px;
+  width: 80px;
 }
 
 .right-shift {
-    width: 110px;
+  width: 110px;
 }
 
 .space {
-    width: 300px;
+  width: 300px;
 }
 
 .CTRL {
-    width: 50px;
+  width: 50px;
 }
 
 .laptop-specs {
-    background-color: rgb(247, 247, 247);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    width: 700px;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 20px;
-    overflow-y: auto;
-    animation: loadIn 0.64s;
+  background-color: rgb(247, 247, 247);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  width: 700px;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 20px;
+  overflow-y: auto;
+  animation: loadIn 0.64s;
 }
 
 .laptop-specs h2 {
-    color:#414141;
-    margin-bottom: 10px;
-    margin-top: 10px;
+  color: #414141;
+  margin-top: 10px;
+  text-align: left;
+  font-weight: 300;
 }
 
-.laptop-colors, .back-light, .laptop-cpu, .laptop-gpu, .ram, .storage {
-    width: 100%;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    border-bottom: 1px solid black;
-    padding: 20px;
+.laptop-specs h1 {
+  color: #414141;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-.color1, .color2, .color3, .color4, .backlight1, .backlight2, .backlight3, .backlight4, .backlight5, .backlight0 {
-    width: 25px;
-    height: 25px;
-    background-color: transparent;
-    border: none;
-    outline: hidden;
-    border-radius: 20px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-    font-size: 12px;
-    color: #000;
-    cursor: pointer;
-    transition: 0.2s ease;
+.laptop-colors,
+.back-light,
+.laptop-cpu,
+.laptop-gpu,
+.ram,
+.storage {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid black;
+  padding: 20px;
 }
 
-.cpu, .gpu, .ram-option, .storage-option {
-    background-color: transparent;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-    color: #000;
-    width: 100px;
-    height: 30px;
-    border: none;
-    outline: hidden;
-    border-radius: 20px;
-    font-size: 12px;
-    cursor: pointer;
-    transition: 0.2s ease;
+.color1,
+.color2,
+.color3,
+.color4,
+.backlight1,
+.backlight2,
+.backlight3,
+.backlight4,
+.backlight5,
+.backlight0 {
+  width: 35px;
+  height: 25px;
+  background-color: transparent;
+  border: none;
+  outline: hidden;
+  border-radius: 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  font-size: 12px;
+  color: #000;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.cpu,
+.gpu,
+.ram-option,
+.storage-option {
+  background-color: transparent;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  color: #000;
+  width: 100px;
+  height: 30px;
+  border: 1px solid black;
+  outline: hidden;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.2s ease;
 }
 
 .gpu {
-    width: 150px;
-    font-size: 11px;
+  width: 150px;
+  font-size: 10px;
 }
 
-.color1:hover, .color2:hover, .color3:hover, .color4:hover, .backlight1:hover, .backlight2:hover, .backlight3:hover, .backlight4:hover, .cpu:hover, .gpu:hover, .ram-option:hover, .storage-option:hover, .backlight5:hover, .backlight0:hover{
-    transform: scale(1.1);
+.color1:hover,
+.color2:hover,
+.color3:hover,
+.color4:hover,
+.backlight1:hover,
+.backlight2:hover,
+.backlight3:hover,
+.backlight4:hover,
+.cpu:hover,
+.gpu:hover,
+.ram-option:hover,
+.storage-option:hover,
+.backlight5:hover,
+.backlight0:hover {
+  transform: scale(1.1);
 }
 
-.color1:active, .color2:active, .color3:active, .color4:active, .backlight1:active, .backlight2:active, .backlight3:active, .backlight4:active, .cpu:active, .gpu:active, .ram-option:active, .storage-option:active, .backlight5:active, .backlight0:active {
-    transform: scale(0.9);
+.color1:active,
+.color2:active,
+.color3:active,
+.color4:active,
+.backlight1:active,
+.backlight2:active,
+.backlight3:active,
+.backlight4:active,
+.cpu:active,
+.gpu:active,
+.ram-option:active,
+.storage-option:active,
+.backlight5:active,
+.backlight0:active {
+  transform: scale(0.9);
 }
 
-.color1, .color2, .color3, .color4, .backlight1, .backlight2, .backlight3, .backlight4, .backlight5, .backlight0 {
-    background-color: #28282B;
-    color: white;
+.color1,
+.color2,
+.color3,
+.color4,
+.backlight1,
+.backlight2,
+.backlight3,
+.backlight4,
+.backlight5,
+.backlight0 {
+  background-color: #28282b;
+  color: white;
 }
 
-.color2, .color3, .color4, .backlight2, .backlight3, .backlight4, .backlight5, .backlight0 {
-    background-color: #c0c0c0;
+.color2,
+.color3,
+.color4,
+.backlight2,
+.backlight3,
+.backlight4,
+.backlight5,
+.backlight0 {
+  background-color: #c0c0c0;
 }
 
 .color3 {
-    background-color: #FFD6D1; /* Gold */
+  background: linear-gradient(45deg, #FFD6D1, #8B5A54);
 }
 
 .backlight5 {
-    background-color: #FFD6D1; /* Rose */
+  background: linear-gradient(45deg, #FFD6D1, #8B5A54);
+}
+
+.backlight2 {
+    background: linear-gradient(45deg, #FFFFFF, #A9A9A9);
 }
 
 .backlight3 {
-    background-color: #0000FF; /* Blue */
+  background: linear-gradient(45deg, #0000FF, #00008B);
 }
 
 .backlight4 {
-    background-color: #FF0000; /* Red */
+  background: linear-gradient(45deg, #FF0000, #8B0000);
 }
 
+
 .backlight0 {
-    background-color: transparent;
-    color: black;
+  background-color: transparent;
+  color: black;
+  font-size: 20px;
 }
 
 .container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 250px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 250px;
 }
 
 .rgb {
-    background: linear-gradient(120deg, red, green, blue);
+  background: linear-gradient(
+    -45deg, 
+    #E57373,
+    #FFB74D,
+    #FFF176,
+    #81C784,
+    #64B5F6,
+    #9575CD,
+    #BA68C8 
+  );
 }
 
-.screen, .base, .keyboard, .trackpad {
-    transition: background-color 0.3s ease-in-out;
+.screen,
+.base,
+.keyboard,
+.trackpad {
+  transition: background-color 0.3s ease-in-out;
 }
 
 #laptop {
-    transition: transform 100ms linear;
+  transition: transform 100ms linear;
 }
-
 
 </style>
