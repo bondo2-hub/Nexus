@@ -3,564 +3,424 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/g2zKVvdp/logo.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <title>Nexus</title>
 </head>
-<body id="body">
-    <div class="container">
-        <div class="laptop" id='laptop'>
-            <div class="screen" id="screen">
-                <div class="inner-screen">
-                    <img src="https://i.postimg.cc/sDc3d7Cw/wallpaper.jpg"/>
-                </div>
-                <div>
-                    <h2>AIRBOOK Mk3</h2>
-                </div>
-            </div>
-            <div class='base' id='base'>
-                <div class="keyboard" id="keyboard">
-                    <div class="row">
-                        <button class="key ESC">ESC</button>
-                        <button class="key">F1</button>
-                        <button class="key">F2</button>
-                        <button class="key">F3</button>
-                        <button class="key">F4</button>
-                        <button class="key">F5</button>
-                        <button class="key">F6</button>
-                        <button class="key">F7</button>
-                        <button class="key">F8</button>
-                        <button class="key">F9</button>
-                        <button class="key">F10</button>
-                        <button class="key">F11</button>
-                        <button class="key">F12</button>
-                        <button class="key back-space">BACKSPACE</button>
-                    </div>
-                    <div class="row">
-                        <button class="key tab">TAB</button>
-                        <button class="key">Q</button>
-                        <button class="key">W</button>
-                        <button class="key">E</button>
-                        <button class="key">R</button>
-                        <button class="key">T</button>
-                        <button class="key">Y</button>
-                        <button class="key">U</button>
-                        <button class="key">I</button>
-                        <button class="key">O</button>
-                        <button class="key">P</button>
-                        <button class="key">[</button>
-                        <button class="key">]</button>
-                        <button class="key front-slash">\</button>
-                    </div>
-                    <div class="row">
-                        <button class="key capslock">CAPSLK</button>
-                        <button class="key">A</button>
-                        <button class="key">S</button>
-                        <button class="key">D</button>
-                        <button class="key">F</button>
-                        <button class="key">G</button>
-                        <button class="key">H</button>
-                        <button class="key">J</button>
-                        <button class="key">K</button>
-                        <button class="key">L</button>
-                        <button class="key">;</button>
-                        <button class="key">""</button>
-                        <button class="key enter">ENTER</button>
-                    </div>
-                    <div class="row">
-                        <button class="key left-shift">SHIFT</button>
-                        <button class="key">Z</button>
-                        <button class="key">X</button>
-                        <button class="key">C</button>
-                        <button class="key">V</button>
-                        <button class="key">B</button>
-                        <button class="key">N</button>
-                        <button class="key">M</button>
-                        <button class="key">,</button>
-                        <button class="key">.</button>
-                        <button class="key">/</button>
-                        <button class="key right-shift">SHIFT</button>
-                    </div>
-                    <div class="row right">
-                        <button class="key CTRL">CTRL</button>
-                        <button class="key">WIN</button>
-                        <button class="key">ALT</button>
-                        <button class="key space">_________</button>
-                        <button class="key">ALT</button>
-                        <button class="key">FN</button>
-                        <button class="key">DOC</button>
-                        <button class="key CTRL">CTRL</button>
-                    </div>
-                </div>
-                <div class='trackpad' id="trackpad"></div>
-            </div>
+<body>
+
+    <!-- Intro Section -->
+
+    <section class="first-load-section">
+        <div class="load-container one">
+            <h1 class="head-title">Introducing, Nexus.</h1>
         </div>
-    
-        <div class="laptop-specs">
-            <h2>Laptop Specifications</h2>
-            <div class="laptop-colors">
-                <button id='toMid' onclick="colorMid()" class='color1'><span></span></button>
-                <button id='toSil' onclick="colorSil()" class='color2'><span></span></button>
-            </div>
+    </section>
+
+    <section class="second-load-section">
+        <div class="load-container two">
+            <h1 class="head-title">Experience Nexus unique designs</h1>
+        </div>
+    </section>
+
+    <section class="third-load-section">
+        <div class="load-container three">
+            <a class="getStarted-btn" href="#main-section">GET STARTED</a>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+
+    <section id="main-section" role="region" aria-labelledby="main-section">
+        <div class="main-container">
+
+            <!-- Header Section -->
+
+            <div class="header-container">
+                <header class="header">
+                    <div class="logo">
+                        <img src="https://i.postimg.cc/g2zKVvdp/logo.png" alt="Nexus" />
+                    </div>
         
-            <h2>Backlight</h2>
-            <div class="back-light">
-                <button id='toRGB' onclick="backlightRGB()" class='backlight1 rgb'><span></span></button>
-                <button id='toWhite' onclick="backlightWhite()" class='backlight2'><span></span></button>
-                <button id='toBlue' onclick="backlightBlue()" class='backlight3'><span></span></button>
-                <button id='toRed' onclick="backlightRed()" class='backlight4'><span></span></button>
-            </div>
+                    <nav class="nav-menu">
+                        <div class="nav-item dropdown airbook-dropdown">
+                            <a class='nav-link' href="#airbook">AIRBOOK</a>
+                            <div class="dropdown-content airbook-dropdown-content">
+                                <div class="dropdown-section">
+                                    <p class="section-title">Explore Airbook</p>
+                                    <p class="dropdown-link"><a href="#airbook-pro">Airbook Pro</a></p>
+                                    <p class="dropdown-link"><a href="#airbook-mk3">Airbook Mk3</a></p>
+                                    <p class="dropdown-link"><a href="#airbook-m1">Airbook M1</a></p>
+                                    <p class="dropdown-link"><a href="#airbook-max">Airbook Max</a></p>
+                                </div>
+                                <div class="dropdown-section">
+                                    <p class="section-title">More from Nexus</p>
+                                    <p class="dropdown-link"><a href="#airbook-accessories">Nexus Airbook Accessories</a></p>
+                                    <p class="dropdown-link"><a href="#airbook-support">Nexus Airbook Support</a></p>
+                                    <p class="dropdown-link"><a href="#airbook-community">Nexus Airbook Community</a></p>
+                                </div>
+                            </div>
+                        </div>
         
-            <h2>Processors</h2>
-            <div class="laptop-cpu">
-                <button class="cpu">Intel Core i9</button>
-                <button class="cpu">AMD Ryzen 9</button>
-                <button class="cpu">Apple M1</button>
-                <button class="cpu">Intel Core i7</button>
-                <button class="cpu">AMD Ryzen 7</button>
-                <button class="cpu">Apple M1 Max</button>
+                        <div class="nav-item dropdown stellar-dropdown">
+                            <a class='nav-link' href="#stellar">STELLAR</a>
+                            <div class="dropdown-content stellar-dropdown-content">
+                                <div class="dropdown-section">
+                                    <p class="section-title">Explore Stellar</p>
+                                    <p class="dropdown-link"><a href="#stellar-11">Stellar 11</a></p>
+                                    <p class="dropdown-link"><a href="#stellar-11-pro-max">Stellar 11 Pro Max</a></p>
+                                    <p class="dropdown-link"><a href="#stellar-12">Stellar 12</a></p>
+                                    <p class="dropdown-link"><a href="#stellar-12-pro-max">Stellar 12 Pro Max</a></p>
+                                </div>
+                                <div class="dropdown-section">
+                                    <p class="section-title">More from Nexus</p>
+                                    <p class="dropdown-link"><a href="#stellar-accessories">Nexus Stellar Accessories</a></p>
+                                    <p class="dropdown-link"><a href="#stellar-support">Nexus Stellar Support</a></p>
+                                    <p class="dropdown-link"><a href="#stellar-community">Nexus Stellar Community</a></p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="nav-item dropdown watches-dropdown">
+                            <a class='nav-link' href="#watches">WATCHES</a>
+                            <div class="dropdown-content watches-dropdown-content">
+                                <div class="dropdown-section">
+                                    <p class="section-title">Explore Watches</p>
+                                    <p class="dropdown-link"><a href="#aether">Aether</a></p>
+                                    <p class="dropdown-link"><a href="#aether-pro">Aether Pro</a></p>
+                                    <p class="dropdown-link"><a href="#aether-3rd-gen">Aether 3rd Generation</a></p>
+                                    <p class="dropdown-link"><a href="#aether-series-3">Aether Series 3</a></p>
+                                </div>
+                                <div class="dropdown-section">
+                                    <p class="section-title">More from Nexus</p>
+                                    <p class="dropdown-link"><a href="#watches-accessories">Nexus Watches Accessories</a></p>
+                                    <p class="dropdown-link"><a href="#watches-support">Nexus Watches Support</a></p>
+                                    <p class="dropdown-link"><a href="#watches-community">Nexus Watches Community</a></p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="nav-item dropdown aeropods-dropdown">
+                            <a class='nav-link' href="#aeropods">AEROPODS</a>
+                            <div class="dropdown-content aeropods-dropdown-content">
+                                <div class="dropdown-section">
+                                    <p class="section-title">Explore AeroPods</p>
+                                    <p class="dropdown-link"><a href="#all-aeropods">Explore All AeroPods</a></p>
+                                    <p class="dropdown-link"><a href="#aeropods-pro">AeroPods Pro</a></p>
+                                    <p class="dropdown-link"><a href="#aeropods-pro-2nd-gen">AeroPods Pro 2nd Generation</a></p>
+                                    <p class="dropdown-link"><a href="#aeropods-pro-3rd-gen">AeroPods Pro 3rd Generation</a></p>
+                                </div>
+                                <div class="dropdown-section">
+                                    <p class="section-title">More from Nexus</p>
+                                    <p class="dropdown-link"><a href="#aeropods-accessories">Nexus AeroPods Accessories</a></p>
+                                    <p class="dropdown-link"><a href="#aeropods-support">Nexus AeroPods Support</a></p>
+                                    <p class="dropdown-link"><a href="#aeropods-music">Nexus AeroPods Music</a></p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="nav-item dropdown support-dropdown">
+                            <a class='nav-link' href="#support">SUPPORT</a>
+                            <div class="dropdown-content support-dropdown-content">
+                                <div class="dropdown-section">
+                                    <p class="section-title">Explore Support</p>
+                                    <p class="dropdown-link"><a href="#airbook-support">Airbook</a></p>
+                                    <p class="dropdown-link"><a href="#stellar-support">STELLAR</a></p>
+                                    <p class="dropdown-link"><a href="#aeropods-support">AeroPods</a></p>
+                                    <p class="dropdown-link"><a href="#aether-support">Aether</a></p>
+                                </div>
+                                <div class="dropdown-section">
+                                    <p class="section-title">Get Help</p>
+                                    <p class="dropdown-link"><a href="#community">Community</a></p>
+                                    <p class="dropdown-link"><a href="#service">Service</a></p>
+                                </div>
+                                <div class="dropdown-section">
+                                    <p class="section-title">Helpful Topics</p>
+                                    <p class="dropdown-link"><a href="#setup-guide">Nexus Product Setup Guide</a></p>
+                                    <p class="dropdown-link"><a href="#troubleshooting">Nexus Troubleshooting Tips</a></p>
+                                    <p class="dropdown-link"><a href="#battery-life">Nexus Battery Life Optimization</a></p>
+                                    <p class="dropdown-link"><a href="#compatibility">Nexus Compatibility Information</a></p>
+                                    <p class="dropdown-link"><a href="#customization">Nexus Customization and Settings</a></p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="nav-item dropdown buy-dropdown">
+                            <a class='nav-link' href="#buy">WHERE TO BUY</a>
+                            <div class="dropdown-content buy-dropdown-content">
+                                <div class="dropdown-section">
+                                    <p class="section-title">Explore</p>
+                                    <p class="dropdown-link"><a href="#authorized-sellers">Authorized Sellers</a></p>
+                                    <p class="dropdown-link"><a href="#service-support">Service & Support</a></p>
+                                </div>
+                                <div class="dropdown-section">
+                                    <p class="section-title">Explore all ways to Buy</p>
+                                    <p class="dropdown-link"><a href="#authorized-sellers">Find Locations</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+        
+                    <div class="right-side">
+                        <div class='search-icon'>
+                            <a href="#"><i class='bx bx-search'></i></a>
+                        </div>
+            
+                        <div class='hamburger'>
+                            <a><i class='bx bx-menu'></i></a>
+                        </div>
+
+                        <div class="hamburger-navmenu">
+                            <h1>Explore in Nexus</h1>
+                            <a href="#airbook" class="dropdown-link">Airbook</a> 
+                            <a href="#stellar" class="dropdown-link">Stellar</a> 
+                            <a href="#aether" class="dropdown-link">Aether</a> 
+                            <a href="#aeropods" class="dropdown-link">AeroPods</a>
+                            <a href="#support" class="dropdown-link">Support</a>
+                            <div class='theme-colors'>
+                                <button id='black-color-theme'></button>
+                                <button id='white-color-theme'></button>
+                            </div>
+                        </div>
+                    </div>
+                </header>
             </div>
             
-            <h2>Graphics Card</h2>
-            <div class="laptop-gpu">
-                <button class="gpu">Intel Iris Plus Graphics 655</button>
-                <button class="gpu">AMD Radeon RX 5700XT</button>
-                <button class="gpu">Apple M1 Pro</button>
-                <button class="gpu">NVIDIA GeForce RTX 3060</button>
-                <button class="gpu">AMD Radeon RX 6800</button>
-                <button class="gpu">NVIDIA GeForce RTX 3080</button>
+            <h1 class="main-headers">AIRBOOK</h1>
+            <!-- Main Display Section -->
+
+            <div class='displayer0'>
+                <video id="video" autoplay muted loop src="content/vid.mp4"></video>
+                <button id="toggleButton"><i class="bx bx-pause"></i></button>
+
             </div>
-        
-            <h2>RAM</h2>
-            <div class="ram">
-                <button class="ram-option">8 GB</button>
-                <button class="ram-option">16 GB</button>
-                <button class="ram-option">32 GB</button>
-                <button class="ram-option">64 GB</button>
+            
+
+            <div class="displayer1">
+                <div class='introduction'>
+                    <h1>Introducing, Airbook Mk3</h1>
+                    <p>A Generational Change</p>
+                </div>
+                <div class='more-info'>
+                    <button class="buy-btn">BUY</button>
+                    <a class="buy-a" href="#">Learn more</a>
+                </div>
+                <div class='img'>
+                    <img src="https://i.postimg.cc/mZpKTtmZ/laptops.png" alt="Laptop Image"/>
+                </div>
             </div>
-        
-            <h2>Storage</h2>
-            <div class="storage">
-                <button class="storage-option">256 GB SSD</button>
-                <button class="storage-option">512 GB SSD</button>
-                <button class="storage-option">1 TB SSD</button>
-                <button class="storage-option">2 TB SSD</button>
+
+            <!-- Pick What Suits You Section -->
+
+            <h1 class="main-headers">Pick what suits you.</h1>
+
+            <div class="displayer2">
+
+                <!-- Laptop Display 1 -->
+                <div class="laptop">
+                    <div class="laptop-specifications">
+                        <div class='laptop-icon'>
+                            <img src="https://i.postimg.cc/xT3LscTP/product-laptop.png" alt="Laptop"/>
+                        </div>
+                        
+                        <span class="colors one"></span>
+                        <span class="colors two1"></span>
+                        <h1 class="laptop-name">AIRBOOK MK3 16" and 17"</h1>
+                        <span>NEX4, NEX5, NEX6PRO</span>
+                        <p>Best for demanding workflows.</p>
+
+                        <div class="id">
+                            <button class="buy-btn">BUY</button>
+                            <a class="buy-a" href="#">Learn more</a>
+                        </div>
+
+                        <div class="sep"></div>
+
+                        <!-- Laptop Specifications -->
+                        <div class="laptop-screensize">
+                            <h1>16" or 17"</h1>
+                            <p>Liquid Retina XDR display with up to 1600<br>nits peak brightness, 1,000,000:1 contrast<br> ratio, and up to 165Hz refresh rates</p>
+                        </div>
+                        <div class="laptop-batterylife">
+                            <h1>24 Hours</h1>
+                            <p>Battery life</p>
+                        </div>
+                        <div class="laptop-ports">
+                            <h1>7 ports</h1>
+                            <p>3x Thunderbolt 4 (USB-C), HDMI, SDXC, headphone jack</p>
+                        </div>
+                        <div class="laptop-weight">
+                            <h1>1.85 kg or 2.64 kg</h1>
+                            <p>Weight</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Laptop Display 2 -->
+
+                <div class="laptop">
+                    <div class="laptop-specifications">
+                        <div class='laptop-icon'>
+                            <img src="https://i.postimg.cc/BnZHR4jf/product-laptop2.png" alt="Laptop"/>
+                        </div>
+
+                        <span class="colors idk"></span>
+                        <span class="colors four"></span>
+                        <span class="colors five"></span>
+                        <h1>AIRBOOK MK3 14" and 15"</h1>
+                        <span>NEX4, NEX5, NEX6PRO</span>
+                        <p>Best for demanding workflows.</p>
+
+                        <div class="id">
+                            <button class="buy-btn">BUY</button>
+                            <a class="buy-a" href="#">Learn more</a>
+                        </div>
+
+                        <div class="sep"></div>
+
+                        <!-- Laptop Specifications -->
+                        <div class="laptop-screensize">
+                            <h1>14" or 15"</h1>
+                            <p>Liquid Retina XDR display with up to 1600<br>nits peak brightness, 1,000,000:1 contrast<br> ratio, and up to 120Hz refresh rates</p>
+                        </div>
+                        <div class="laptop-batterylife">
+                            <h1>18 Hours</h1>
+                            <p>Battery life</p>
+                        </div>
+                        <div class="laptop-ports">
+                            <h1>7 ports</h1>
+                            <p>3x Thunderbolt 4 (USB‑C), HDMI, SDXC, headphone jack</p>
+                        </div>
+                        <div class="laptop-weight">
+                            <h1>1.55 kg or 2.14 kg</h1>
+                            <p>Weight</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+
+            <h1 class="main-headers">Important Topics</h1>
+
+            <div class="displayer3">
+                <div class="boxes">
+                    <div class="box-container">
+                        <div class="model box-sheet" data-text="Airbook has that sleek, slim and comfy model that your comfort would seek.">
+                            <img src="https://i.postimg.cc/RCKQRTFn/idol.png" alt="Airbook's unique Design"/>
+                            <p class="top-left">Airbook's unique Design</p>
+                            <p class="center-text"></p>
+                        </div>
+                    </div>
+                    <div class="box-container">
+                        <div class="perfnbattery box-sheet" data-text="Airbook's battery life is unparalleled, offering up to 24 hours of battery life on a single charge.">
+                            <img src="https://i.postimg.cc/RCKQRTFn/idol.png" alt="Battery life and Performance"/>
+                            <p class="top-left">Battery life and Performance</p>
+                            <p class="center-text"></p>
+                        </div>
+                    </div>
+                    <div class="box-container">
+                        <div class="security box-sheet" data-text="Airbook's security features include biometric authentication, secure lock screen, and a fingerprint scanner.">
+                            <img src="https://i.postimg.cc/RCKQRTFn/idol.png" alt="Security and Privacy"/>
+                            <p class="top-left">Security and Privacy</p>
+                            <p class="center-text"></p>
+                        </div>
+                    </div>
+                    <div class="box-container">
+                        <div class="community box-sheet" data-text="Airbook's community is vibrant, with thousands of users sharing their experiences and ideas.">
+                            <img src="https://i.postimg.cc/RCKQRTFn/idol.png" alt="Community and Collaboration"/>
+                            <p class="top-left">Community and Collaboration</p>
+                            <p class="center-text"></p>
+                        </div>
+                    </div>
+                    <div class="box-container">
+                        <div class="nexusint box-sheet" data-text="Airbook's Nexus integration offers seamless connectivity with popular smart home devices.">
+                            <img src="https://i.postimg.cc/RCKQRTFn/idol.png" alt="Nexus Integration"/>
+                            <p class="top-left">Nexus Integration</p>
+                            <p class="center-text"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navigation-buttons">
+                <button class="swipe-left"><i class='bx bx-chevron-left' ></i></button>
+                <button class="swipe-right"><i class='bx bx-chevron-right' ></i></button>
+            </div>
+            
+            <div class="displayer4">
+                <h3>None have suit you?</h3>
+                <button class='BuildBtn'><a href="build.html">Build Your own</a></button>
+            </div>
+              
+            <section id="footer">
+                <footer class='footer'>
+                    <div class="footer-container">
+                        <div class="upper-footer">
+                            <div class="stSection">
+                                <h1 class="brand-name">NEXUS</h1>
+                                <p class="item">ELECTRONICS COMPANY</p>
+                            </div>
+                
+                            <div class="ndSection">
+                                <span class="item">SERVICES</span>
+                                <span class="item">SUPPORT</span>
+                                <span class="item">LOCATIONS</span>
+                                <span class="item">SUBMIT A TICKET</span>
+                            </div>
+                
+                            <div class="ndSection">
+                                <span class="item">HIRING</span>
+                                <span class="item">ABOUT US</span>
+                                <span class="item">CONTACT US</span>
+                                <span class="item">AFFILIATES</span>
+                            </div>
+                        </div>
+                
+                        <div class="down-footer">
+                            &copy; 2024 NEXUS | All Rights Reserved
+                        </div>
+                    </div>
+                </footer>                
+            </section>
         
-    </div>
+    </section>
+    <script src="script.js"></script>
 </body>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-    const laptop = document.getElementById('laptop');
-
-    document.addEventListener('mousemove', (event) => {
-        const xAxis = (window.innerWidth / 2 - event.pageX) / 25;
-        const yAxis = (window.innerHeight / 2 - event.pageY) / 25;
-        laptop.style.transform = `rotateX(${yAxis}deg) rotateY(${xAxis}deg)`;
-    });
-
-    document.addEventListener('mouseout', () => {
-        laptop.style.transform = `rotateY(0deg) rotateX(0deg)`;
-    });
-});
-
-const Midnight = document.getElementById('toMid');
-const Silver = document.getElementById('toSil');
-const screen = document.getElementById('screen');
-const keyboard = document.getElementById('keyboard');
-const base = document.getElementById('base');
-const trackpad = document.getElementById('trackpad')
-const body = document.getElementById('body')
-
-function changeColor(baseColor, keyboardColor, screenColor, trackpadColor) {
-    let base = document.getElementById('base');
-    let keyboard = document.getElementById('keyboard');
-    let screen = document.getElementById('screen');
-    let trackpad = document.getElementById('trackpad');
-
-    base.style.background = `linear-gradient(135deg, ${baseColor[0]}, ${baseColor[1]})`;
-    keyboard.style.background = `linear-gradient(135deg, ${keyboardColor[0]}, ${keyboardColor[1]})`;
-    screen.style.background = `linear-gradient(135deg, ${screenColor[0]}, ${screenColor[1]})`;
-    trackpad.style.background = `linear-gradient(135deg, ${trackpadColor[0]}, ${trackpadColor[1]})`;
-}
-
-// Example functions to call the changeColor function with specific colors
-function colorMid() {
-    changeColor(['#28282B', '#1a1a1a'], ['#28282B', '#1a1a1a'], ['#28282B', '#1a1a1a'], ['#28282B', '#1a1a1a']);
-}
-
-function colorSil() {
-    changeColor(['#c0c0c0', '#a0a0a0'], ['#c0c0c0', '#a0a0a0'], ['#c0c0c0', '#a0a0a0'], ['#c0c0c0', '#a0a0a0']);
-}
-
-function colorGold() {
-    changeColor(['#FFD700', '#FFEF96'], ['#FFD700', '#FFEF96'], ['#FFD700', '#FFEF96'], ['#FFD700', '#FFEF96']);
-}
-
-function colorRose() {
-    changeColor(['#FF69B4', '#FFB6C1'], ['#FF69B4', '#FFB6C1'], ['#FF69B4', '#FFB6C1'], ['#FF69B4', '#FFB6C1']);
-}
-
-
-function changeBacklight(colorClass) {
-    let keys = document.querySelectorAll('.key');
-    keys.forEach(key => {
-        key.classList.remove('backlight-rgb', 'backlight-white', 'backlight-red', 'backlight-green', 'backlight-blue');
-        key.classList.add(colorClass);
-    });
-}
-
-// Example functions to call the changeBacklight function with specific colors
-function backlightRGB() {
-    changeBacklight('backlight-rgb');
-}
-
-function backlightWhite() {
-    changeBacklight('backlight-white');
-}
-
-function backlightRed() {
-    changeBacklight('backlight-red');
-}
-
-function backlightGreen() {
-    changeBacklight('backlight-green');
-}
-
-function backlightBlue() {
-    changeBacklight('backlight-blue');
-}
-
-
-    </script>
 </html>
 
 <style>
-    * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-@keyframes loadIn {
-    0% {
-        opacity: 0;
-        transform: translateY(-10px);
+    .displayer4 {
+        background-color: white;
+        padding: 50px;
+        text-align: center;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        width: 100%;
     }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
+
+    .displayer4 h3 {
+        font-size: 30px;
     }
-}
 
-body {
-    background-color:#f0f0f0;
-    font-family: 'Montserrat';
-}
+    .BuildBtn {
+        font-family: 'Montserrat';
+        background-color: transparent;
+        color: black;
+        width: 300px;
+        height: 50px;
+        border: 1px solid black;
+        cursor: pointer;
+        transition: 0.3s ease-out;
+        font-size: 20px;
+    }
 
-.laptop {
-    position: relative;
-    perspective: 2000px;
-    transform-style: preserve-3d;
-    animation: loadIn 0.64s;
-}
+    .BuildBtn:hover {
+       transform: scale(1.02);
+    }
 
-.screen {
-    background: linear-gradient(135deg, #28282B, #1a1a1a);
-    width: 700px;
-    height: 420px;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    margin-bottom: -26px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
-    transform: rotateX(-20deg);
-}
-
-.bezel { background-color: #000; width: 100%; height: 100%; padding: 10px; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4); border-radius: 10px 10px 0 0; }
-
-.screen h2 {
-    color: white;
-    margin-top: 5px;
-    font-size: 12px;
-    font-weight: 300;
-}
-
-.inner-screen {
-    background-color: white;
-    width: 680px;
-    height: 370px;
-    border-radius: 5px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
-    margin-top: 10px;
-}
-
-.inner-screen img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.base {
-    width: 700px;
-    height: 420px;
-    background: linear-gradient(135deg, #28282B, #1a1a1a);
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    transform: rotateX(20deg);
-}
-
-.keyboard {
-    background: linear-gradient(135deg, #28282B, #1a1a1a);
-    width: 90%;
-    position: relative;
-    bottom: 20px; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
-    animation: loadIn 0.8s;
-}
-
-.trackpad {
-    background: linear-gradient(135deg, #28282B, #1a1a1a);
-    width: 40%;
-    height: 100px;
-    background-color: #28282B;
-    border-radius: 5px;
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
-}
-
-.row {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.key {
-    font-family: 'Montserrat';
-    width: 35px;
-    height: 35px;
-    background-color: #000000;
-    color: #cccccc;
-    margin: 3px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2), inset 0 -2px 5px rgba(0, 0, 0, 0.5);
-    font-size: 10px;
-    border: none;
-    cursor: pointer;
-    position: relative;
-    transition: 0.2s ease;
-    animation: loadIn 0.9s;
-}
-
-.key:hover {
-    background-color: #1a1a1a;
-    color: white;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4), inset 0 -2px 5px rgba(0, 0, 0, 0.7);
-    transition: 0.2s ease;
-}
-
-.key:active {
-    transform: scale(0.9);
-}
-
-.backlight-rgb {
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5), 0 0 15px rgba(255, 0, 0, 0.2), 0 0 15px rgba(255, 0, 0, 0.2); /* Red glow */
-    animation: rgbBacklight 3s infinite;
-}
-
-.backlight-white {
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 255, 255, 0.2), 0 0 15px rgba(255, 255, 255, 0.2); /* White glow */
-}
-
-.backlight-red {
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.8), 0 0 15px rgba(255, 0, 0, 0.2), 0 0 15px rgba(255, 0, 0, 0.2); /* Red glow */
-}
-
-.backlight-green {
-    box-shadow: 0 0 15px rgba(0, 255, 0, 0.8), 0 0 15px rgba(0, 255, 0, 0.2), 0 0 15px rgba(0, 255, 0, 0.2); /* Green glow */
-}
-
-.backlight-blue {
-    box-shadow: 0 0 15px rgba(0, 0, 255, 0.8), 0 0 15px rgba(0, 0, 255, 0.2), 0 0 15px rgba(0, 0, 255, 0.2); /* Blue glow */
-}
-
-@keyframes rgbBacklight {
-    0% { box-shadow: 0 0 15px rgba(255, 0, 0, 0.5), 0 0 15px rgba(255, 0, 0, 0.5), 0 0 15px rgba(255, 0, 0, 0.5); } /* Red */
-    33% { box-shadow: 0 0 15px rgba(0, 255, 0, 0.5), 0 0 15px rgba(0, 255, 0, 0.5), 0 0 15px rgba(0, 255, 0, 0.5); } /* Green */
-    66% { box-shadow: 0 0 15px rgba(0, 0, 255, 0.5), 0 0 15px rgba(0, 0, 255, 0.5), 0 0 15px rgba(0, 0, 255, 0.5); } /* Blue */
-    100% { box-shadow: 0 0 15px rgba(255, 0, 0, 0.5), 0 0 15px rgba(255, 0, 0, 0.5), 0 0 15px rgba(255, 0, 0, 0.5); } /* Back to red */
-}
-
-.back-space {
-    width: 120px;
-}
-
-.tap {
-    width: 50px;
-}
-
-.front-slash {
-    width: 100px;
-}
-
-.enter {
-    width: 120px;
-}
-
-.capslock {
-    width: 50px;
-}
-
-.left-shift {
-    width: 80px;
-}
-
-.right-shift {
-    width: 110px;
-}
-
-.space {
-    width: 300px;
-}
-
-.CTRL {
-    width: 50px;
-}
-
-.laptop-specs {
-    background-color: rgba(248, 248, 248, 0.2);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    width: 700px;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 20px;
-    border-radius: 10px;
-    overflow-y: auto;
-}
-
-.laptop-specs h2 {
-    color:#414141;
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-
-.laptop-colors, .back-light, .laptop-cpu, .laptop-gpu, .ram, .storage {
-    width: 100%;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    border-bottom: 1px solid black;
-    padding: 20px;
-}
-
-.color1, .color2, .color3, .color4, .backlight1, .backlight2, .backlight3, .backlight4 {
-    width: 25px;
-    height: 25px;
-    background-color: transparent;
-    border: none;
-    outline: hidden;
-    border-radius: 20px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-    font-size: 12px;
-    color: #000;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.cpu, .gpu, .ram-option, .storage-option {
-    width: 100px;
-    height: 30px;
-    background-color: transparent;
-    border: none;
-    outline: hidden;
-    border-radius: 20px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-    font-size: 12px;
-    color: #000;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.gpu {
-    width: 150px;
-    font-size: 11px;
-}
-
-.color1:hover, .color2:hover, .color3:hover, .color4:hover, .backlight1:hover, .backlight2:hover, .backlight3:hover, .backlight4:hover, .cpu:hover, .gpu:hover, .ram-option:hover, .storage-option:hover {
-    transform: scale(1.1);
-}
-
-.color1:active, .color2:active, .color3:active, .color4:active, .backlight1:active, .backlight2:active, .backlight3:active, .backlight4:active, .cpu:active, .gpu:active, .ram-option:active, .storage-option:active {
-    transform: scale(0.9);
-}
-
-.color1, .color2, .color3, .color4, .backlight1, .backlight2, .backlight3, .backlight4 {
-    background-color: #28282B;
-    color: white;
-}
-
-.color2, .color3, .color4, .backlight2, .backlight3, .backlight4 {
-    background-color: #c0c0c0;
-}
-
-.color3 {
-    background-color: #FFD700; /* Gold */
-}
-
-.color4 {
-    background-color: #FF69B4; /* Rose */
-}
-
-.backlight3 {
-    background-color: #0000FF; /* Blue */
-}
-
-.backlight4 {
-    background-color: #FF0000; /* Red */
-}
-
-.container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 250px;
-}
-
-.rgb {
-    background: linear-gradient(120deg, red, green, blue);
-}
-
-.laptop .base, .laptop .keyboard, .laptop .screen, .laptop .trackpad {
-    transition: background 0.5s ease-in-out; /* Adjust the duration and easing function as needed */
-}
-
+    .BuildBtn a {
+        color: black;
+        text-decoration: none;
+    }
 </style>
