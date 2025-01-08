@@ -950,3 +950,35 @@ cursor: pointer;
   border: 1.5px solid;
 }
 
+.displayer4 {
+  background-color: white;
+  padding: 50px;
+  text-align: center;
+  width: 100%;
+  border-top: 1px solid black;
+}
+
+.displayer4 h3 {
+  font-size: 30px;
+}
+
+.BuildBtn {
+  font-family: 'Montserrat';
+  background-color: transparent;
+  color: black;
+  width: 300px;
+  height: 50px;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+  font-size: 20px;
+}
+
+.BuildBtn:hover {
+ transform: scale(1.02);
+}
+
+.BuildBtn a {
+  color: black;
+  text-decoration: none;
+}
